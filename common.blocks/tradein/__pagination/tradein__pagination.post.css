@@ -1,0 +1,16 @@
+:block(tradein):elem(pagination) {
+    :block(button):mod(theme islands) {
+
+        &:block(button):mod(view action) {
+            background: rgba(153, 122, 0, 0.5);
+            &:before {
+                display: block;
+                background-color: #ffeba0;
+            }
+            
+            &:block(button):mod(hovered) {
+                background: rgba(129, 103, 0, 0.6);
+            } 
+        }
+    }
+}

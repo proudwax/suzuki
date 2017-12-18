@@ -1,0 +1,64 @@
+:block(tradein-car) {
+    box-sizing: border-box;
+    display: flex;
+    flex-direction: row;
+    flex-wrap: nowrap;
+
+    align-items: center;
+
+    padding-top: 8px;
+    padding-bottom: 8px;
+
+    &:elem(image) {
+        box-sizing: border-box;
+
+        font-size: 0;
+        padding-right: 16px;
+
+        max-width: 200px;
+        width: 20%;
+
+        & > img {
+            width: 100%;
+        }
+    }
+
+    &:elem(container) {
+        display: flex;
+        flex-direction: row;
+        flex-wrap: wrap;
+
+        justify-content: space-between;
+
+        width: 80%;
+        font-size: 16px;
+        line-height: 24px;
+    }
+
+    &:elem(title) {
+        margin-right: 16px;
+        margin-top: 0;
+        margin-bottom: 0;
+    }
+
+    &:elem(description) {
+        width: 100%;
+    }
+}
+
+
+@media (--small-only) {
+    :block(tradein-car) {
+        &:elem(image) {
+            display: none;
+        }
+
+        &:elem(container) {
+            width: 100%;
+        }
+
+        &:elem(description), &:elem(year), &:elem(mileage) {
+            display: none;
+        }
+    }
+}

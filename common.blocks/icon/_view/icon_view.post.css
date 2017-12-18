@@ -1,0 +1,13 @@
+:block(icon) {
+    &:mod(view line) {
+        background-image: url('view-line.svg');
+        background-position: 50% 50%;
+        background-size: 16px 12px;
+    }
+
+    &:mod(view block) {
+        background-image: url('view-block.svg');
+        background-position: 50% 50%;
+        background-size: 16px 12px;
+    }
+}

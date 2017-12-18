@@ -1,0 +1,31 @@
+:block(tradein) {
+    &:elem(header){
+        display: flex;
+        flex-direction: row;
+        flex-wrap: wrap;
+        
+        justify-content: space-between;
+        align-items: center;
+    
+        padding-top: 8px;
+        padding-bottom: 8px;
+    }
+
+    &:elem(list) {
+        display: flex;
+        flex-direction: column;
+        flex-wrap: nowrap;
+    }
+
+    &:elem(footer) {
+        box-sizing: border-box;
+
+        display: flex;
+        flex-direction: row;
+        flex-wrap: nowrap;
+
+        border-top: 1px solid #e4e4e4;
+        padding-top: 8px;
+        padding-bottom: 8px;
+    }
+}

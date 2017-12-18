@@ -1,0 +1,13 @@
+:block(icon) {
+    &:mod(sort up) {
+        width: 28px;
+        background-image: url('sort-up.svg');
+        background-position: 50% 50%;
+    }
+    
+    &:mod(sort down) {
+        width: 28px;
+        background-image: url('sort-down.svg');
+        background-position: 50% 50%;
+    }
+}
