@@ -1,12 +1,12 @@
 block('page').content()(function() {
     return [
         {
-            block: 'content',
-            content: [
-                {
-                    block: 'tradein'
-                }
-            ]
+            block: 'tradein'
         }
+        // {
+        //     block: 'content',
+        //     content: [
+        //     ]
+        // }
     ];
 });

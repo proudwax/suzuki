@@ -1,0 +1,11 @@
+block('tradein-car')(
+    elem('details')(
+        tag()('dl')
+    ),
+    elem('details-label')(
+        tag()('dt')
+    ),
+    elem('details-value')(
+        tag()('dd')
+    )
+);

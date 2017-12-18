@@ -1,9 +1,10 @@
 block('tradein').elem('limit').content()(function() {
     return [
+        'Показать по: ',
         {
             block: 'radio-group',
             mods: {
-                theme: 'islands',
+                theme: 'suzuki',
                 size: 'm',
                 type: 'button'
             },

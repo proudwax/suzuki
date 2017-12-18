@@ -3,7 +3,7 @@ block('tradein').elem('next').content()(function() {
         {
             block: 'button',
             mods: {
-                theme: 'islands',
+                theme: 'suzuki',
                 type: 'link',
                 size: 'm'
             },

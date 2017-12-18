@@ -4,7 +4,7 @@ block('tradein').elem('sort').content()(function() {
             block: 'select',
             mods: {
                 mode: 'radio-check',
-                theme: 'islands',
+                theme: 'suzuki',
                 size: 'm'
             },
             name: 'sort',
@@ -13,63 +13,23 @@ block('tradein').elem('sort').content()(function() {
             options: [
                 {
                     val: 'price-up',
-                    text: 'Цене',
-                    icon: {
-                        block: 'icon',
-                        mods: {
-                            sort: 'up'
-                        }
-                    }
+                    text: 'По цене (дешевле — дороже)'
                 },
                 {
                     val: 'price-down',
-                    text: 'Цене',
-                    icon: {
-                        block: 'icon',
-                        mods: {
-                            sort: 'down'
-                        }
-                    }
+                    text: 'По цене (дороже — дешевле)'
                 },
                 {
                     val: 'year-up',
-                    text: 'Году',
-                    icon: {
-                        block: 'icon',
-                        mods: {
-                            sort: 'up'
-                        }
-                    }
+                    text: 'По году (новые — старые)'
                 },
                 {
                     val: 'year-down',
-                    text: 'Году',
-                    icon: {
-                        block: 'icon',
-                        mods: {
-                            sort: 'down'
-                        }
-                    }
+                    text: 'По году (старые — новые)'
                 },
                 {
                     val: 3,
-                    text: 'Пробегу',
-                    icon: {
-                        block: 'icon',
-                        mods: {
-                            sort: 'up'
-                        }
-                    }
-                },
-                {
-                    val: 3,
-                    text: 'Пробегу',
-                    icon: {
-                        block: 'icon',
-                        mods: {
-                            sort: 'down'
-                        }
-                    }
+                    text: 'Пробегу'
                 }
             ]
         }
