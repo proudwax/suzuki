@@ -1,4 +1,8 @@
 block('tradein-car').content()(function() {
+    var data = this.data;
+
+    console.log(data);
+
     return [
         {
             elem: 'image',

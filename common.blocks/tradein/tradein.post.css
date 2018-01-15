@@ -18,6 +18,37 @@
         flex-wrap: nowrap;
     }
 
+    &:mod(view list) {
+        :block(tradein) {
+            &:elem(list) {
+            display: flex;
+            flex-direction: column;
+            flex-wrap: nowrap;
+            }
+
+            &:elem(list-item) {
+                width: 100%;
+            }
+        }
+    }
+
+    &:mod(view block) {
+         :block(tradein) {
+            &:elem(list) {
+                display: flex;
+                flex-direction: row;
+                flex-wrap: wrap;
+                justify-content: space-around;
+            }
+            
+            &:elem(list-item) {
+                width: 50%;
+                max-width: 300px;
+            }
+        }
+
+    }
+
     &:elem(footer) {
         box-sizing: border-box;
 

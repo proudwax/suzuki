@@ -12,7 +12,7 @@ block('tradein').elem('view').content()(function() {
             options: [
                 {
                     val: 'line',
-                    // text: 'line',
+                    name: 'line',
                     icon: {
                         block: 'icon',
                         mods: {
@@ -22,7 +22,7 @@ block('tradein').elem('view').content()(function() {
                 },
                 {
                     val: 'block',
-                    // text: 'block',
+                    name: 'block',
                     icon: {
                         block: 'icon',
                         mods: {

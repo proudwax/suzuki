@@ -29,7 +29,8 @@ module.exports = require('enb/lib/build-flow').create()
 
         var BEMTREE = require(bemtreeFilename).BEMTREE,
             BEMHTML = require(bemhtmlFilename).BEMHTML;
+            data = require(this.node._root + '\\data\\trade-in.json');
 
-        return BEMHTML.apply(BEMTREE.apply({ block: 'root' }));
+        return BEMHTML.apply(BEMTREE.apply({ block: 'root', data: data }));
     })
     .createTech();

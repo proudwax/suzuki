@@ -1,4 +1,8 @@
 block('root').replace()(function() {
+    var data = this.data = this.ctx.data;
+
+    if (this.ctx.context) return this.ctx.context;
+
     return {
         block: 'page',
         title: 'TODO',

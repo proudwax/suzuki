@@ -56,6 +56,11 @@
         margin-right: 16px;
         margin-top: 0;
         margin-bottom: 0;
+        min-width: 250px;
+    }
+
+    &:elem(price) {
+        font-weight: 500;
     }
 
     &:elem(description) {
@@ -67,15 +72,34 @@
 @media (--small-only) {
     :block(tradein-car) {
         &:elem(image) {
-            display: none;
+            width: 30%;
         }
 
         &:elem(container) {
-            width: 100%;
+            width: 70%;
+            max-width: 250px;
         }
 
         &:elem(description), &:elem(year), &:elem(mileage) {
             display: none;
+        }
+    }
+}
+
+:block(tradein):mod(view block) {
+    :block(tradein-car) {
+        flex-direction: column;        
+        margin-left: 8px;
+        margin-right: 8px;
+ 
+        &:elem(image) {
+            width: 100%;
+            max-width: 100%;
+        }
+
+        &:elem(container) {
+            padding-top: 8px;
+            width: 100%;
         }
     }
 }

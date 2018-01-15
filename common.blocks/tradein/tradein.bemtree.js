@@ -1,4 +1,22 @@
 block('tradein').content()(function() {
+    var data = this.data,
+        list = [];
+
+    if (data.status == 'success') {
+        list = data.data.map(function (item) {
+            return {
+                elem: 'list-item',
+                data: item
+            }
+        });
+    } else {
+        list = [
+            {
+                elem: 'list-item'
+            }
+        ];
+    }
+
     return [
         {
             elem: 'header',
@@ -16,20 +34,7 @@ block('tradein').content()(function() {
         },
         {
             elem: 'list',
-            content: [
-                {
-                    elem: 'list-item'
-                },
-                {
-                    elem: 'list-item'
-                },
-                {
-                    elem: 'list-item'
-                },
-                {
-                    elem: 'list-item'
-                }
-            ]
+            content: list
         },
         {
             elem: 'footer',
