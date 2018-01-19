@@ -2,7 +2,16 @@
     mustDeps: [
     ],
     shouldDeps: [
-        { block: 'radio-group', mods: { type: 'button', theme: 'suzuki', size: 'm' } }
+        'control-group',
+        {
+            block: 'button',
+            mods: {
+                theme: 'islands',
+                size: 'm',
+                view: 'action',
+                type: 'link'
+            }
+        }
     ]
 })
 

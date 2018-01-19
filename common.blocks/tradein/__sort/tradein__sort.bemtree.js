@@ -5,30 +5,32 @@ block('tradein').elem('sort').content()(function() {
             mods: {
                 mode: 'radio-check',
                 theme: 'suzuki',
-                size: 'm'
+                size: 'm',
+                sort: true
             },
+            js: { 'url': '?re=1' },
             name: 'sort',
-            // val: ,
+            val: 'year-up',
             text: 'Сортировать по',
             options: [
                 {
-                    val: 'price-up',
+                    val: '/desktop.bundles/index/index.html?sort=price-up',
                     text: 'По цене (дешевле — дороже)'
                 },
                 {
-                    val: 'price-down',
+                    val: '/desktop.bundles/index/index.html?sort=price-down',
                     text: 'По цене (дороже — дешевле)'
                 },
                 {
-                    val: 'year-up',
+                    val: '/desktop.bundles/index/index.html?sort=year-up',
                     text: 'По году (новые — старые)'
                 },
                 {
-                    val: 'year-down',
+                    val: '/desktop.bundles/index/index.html?sort=year-down',
                     text: 'По году (старые — новые)'
                 },
                 {
-                    val: 3,
+                    val: '/desktop.bundles/index/index.html?sort=milage',
                     text: 'Пробегу'
                 }
             ]

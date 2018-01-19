@@ -22,6 +22,9 @@ block('tradein').content()(function() {
             elem: 'header',
             content: [
                 {
+                    elem: 'filter'
+                },
+                {
                     elem: 'sort'
                 },
                 {

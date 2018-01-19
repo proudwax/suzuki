@@ -1,7 +1,7 @@
-block('tradein-car').content()(function() {
-    var data = this.data;
+block('tradein-car')(
 
-    console.log(data);
+content()(function() {
+    var data = this.ctx.data;
 
     return [
         {
@@ -9,7 +9,7 @@ block('tradein-car').content()(function() {
             content: [
                 {
                     block: 'image',
-                    url: 'https://api.atlantm.com/n_files/multifile/462/10000x300/1810000019559_01.jpg'
+                    url: data.img['10000x300'][0]
                 }
             ]
         },
@@ -18,24 +18,26 @@ block('tradein-car').content()(function() {
             content: [
                 {
                     elem: 'title',
-                    content: 'Suzuki SX4'
+                    content: data.brand.name + ' ' + data.model.name
                 },
                 {
                     elem: 'price',
-                    content: '1 000 099 руб.'
+                    content: data.price.ust
                 },
                 {
                     elem: 'year',
-                    content: '2014 г.'
+                    content: data.year + ' г.'
                 },
                 {
                     elem: 'mileage',
-                    content: '49049 км'
+                    content: data.mileage + ' км'
                 },
                 {
-                    elem: 'description'
+                    elem: 'description',
+                    data: data
                 }
             ]
         }
     ];
-});
+})
+);

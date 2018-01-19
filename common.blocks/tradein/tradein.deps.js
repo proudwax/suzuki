@@ -2,6 +2,7 @@
     mustDeps: [
     ],
     shouldDeps: [
+        { elem: 'filter' },
         { elem: 'sort' },
         { elem: 'limit' },
         { elem: 'view' },

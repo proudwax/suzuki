@@ -1,3 +1,4 @@
 :block(tradein):elem(view) {
-    
+    box-sizing: border-box;
+    padding: 16px 0;
 }
