@@ -1,3 +1,0 @@
-block('tradein')(
-    js()(true)
-);

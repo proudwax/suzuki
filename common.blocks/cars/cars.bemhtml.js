@@ -1,0 +1,3 @@
+block('cars')(
+    js()(true)
+);

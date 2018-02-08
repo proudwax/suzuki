@@ -1,0 +1,5 @@
+:block(form) {
+    &:mod(cars-filter) {
+        width: 100%;
+    }
+}

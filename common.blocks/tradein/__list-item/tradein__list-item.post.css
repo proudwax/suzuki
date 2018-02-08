@@ -1,9 +1,0 @@
-:block(tradein):elem(list-item) {
-        border-bottom: 1px solid #e4e4e4;
-        overflow: hidden;
-        
-        &:last-child {
-            border-bottom: 0;
-        }
-
-}

@@ -1,0 +1,67 @@
+:block(cars) {
+    &:elem(header){
+        display: flex;
+        flex-direction: row;
+        flex-wrap: wrap;
+        
+        justify-content: space-between;
+        align-items: center;
+    
+        border-bottom: 1px solid #e4e4e4;
+    }
+
+    &:elem(filter) {
+        display: block;
+        height: 500px;
+        width: 100%;
+    }
+
+    &:elem(list) {
+        display: flex;
+        flex-direction: column;
+        flex-wrap: nowrap;
+    }
+
+    &:mod(view list) {
+        :block(cars) {
+            &:elem(list) {
+            display: flex;
+            flex-direction: column;
+            flex-wrap: nowrap;
+            }
+
+            &:elem(list-item) {
+                width: 100%;
+            }
+        }
+    }
+
+    &:mod(view block) {
+         :block(cars) {
+            &:elem(list) {
+                display: flex;
+                flex-direction: row;
+                flex-wrap: wrap;
+                justify-content: space-around;
+            }
+            
+            &:elem(list-item) {
+                width: 50%;
+                max-width: 300px;
+            }
+        }
+
+    }
+
+    &:elem(footer) {
+        box-sizing: border-box;
+
+        display: flex;
+        flex-direction: row;
+        flex-wrap: nowrap;
+
+        border-top: 1px solid #e4e4e4;
+        padding-top: 16px;
+        padding-bottom: 8px;
+    }
+}

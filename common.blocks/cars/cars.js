@@ -1,10 +1,9 @@
-modules.define('form', ['i-bem-dom'], function(provide, bemDom) {
+modules.define('cars', ['i-bem-dom'], function(provide, bemDom) {
 
 provide(bemDom.declBlock(this.name, {
     onSetMod: {
         js: {
             inited: function() {
-                // console.log(this);
             }
         }
     }

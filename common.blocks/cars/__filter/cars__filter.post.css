@@ -1,0 +1,7 @@
+:block(cars) {
+    &:elem(filter) {
+        box-sizing: border-box;
+        padding: 16px 0;
+        width: 100%;
+    }
+}

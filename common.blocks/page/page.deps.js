@@ -5,6 +5,6 @@
     shouldDeps: [
         // 'content',
         'mq',
-        'tradein'
+        'cars'
     ]
 })
