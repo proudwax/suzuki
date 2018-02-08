@@ -5,10 +5,9 @@
         { elem: 'container' }
     ]
 },
-// {
-//     tech: 'js',
-//     shouldDeps: [
-//         { tech: 'bemhtml', block: 'sticky' }
-//     ]
-// }
+{
+    tech: 'js',
+    shouldDeps: [
+    ]
+}
 ]
