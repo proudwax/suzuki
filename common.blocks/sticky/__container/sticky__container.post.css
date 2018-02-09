@@ -3,10 +3,12 @@
     transform: translateZ(0);
     
     &:mod(type visible) {
+        will-change: translate3d;
         transform: translate3d(0, 0, 0);
     }
     
     &:mod(type invisible) {
+        will-change: translate3d;
         transform: translate3d(0, -100%, 0);
     }
     

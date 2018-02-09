@@ -1,18 +1,21 @@
-modules.define('form', ['i-bem-dom', 'select', 'BEMHTML'], function(provide, bemDom, Select, BEMHTML, Form) {
+modules.define('cars-filter', ['i-bem-dom', 'select', 'button', 'BEMHTML'], function(provide, bemDom, Select, Button, BEMHTML) {
 
-provide(Form.declMod({ modName: 'cars-filter', modVal: true }, {
+provide(bemDom.declBlock(this.name, {
     onSetMod: {
         js: {
             inited: function() {
                 this.__base.apply(this, arguments);
 
                 var _this = this,
-                    selectBrand = this.findChildBlock({ block: Select, modName: 'role', modVal: 'brand' });
+                    selectBrand = this.findChildBlock({ block: Select, modName: 'role', modVal: 'brand' }),
+                    submitButton = this.findChildBlock({ block: Button, modName: 'type', modVal: 'submit' });
 
                 selectBrand._events(Select).on('change', function () {
                     var selectModel = _this.findChildBlock({ block: Select, modName: 'role', modVal: 'model' });
 
                     if (this.getVal() != undefined) {
+                        submitButton.delMod('disabled');
+
                         var options = selectBrand.params.models[this.getVal()].map(function (model) {
                                 return { text: model, val: model };
                             });
@@ -34,6 +37,7 @@ provide(Form.declMod({ modName: 'cars-filter', modVal: true }, {
                     } else {
                         selectModel.setVal('undefined');
                         selectModel.setMod('disabled');
+                        submitButton.setMod('disabled');
                     }
                 });
             }

@@ -120,7 +120,7 @@ modules.define('sticky', ['i-bem-dom', 'functions__throttle'], function (provide
         },
         
         _clientRectTop: function () {
-            return this.domElem[0].getBoundingClientRect().top + bemDom.doc[0].body.scrollTop;
+            return this.domElem[0].getBoundingClientRect().top;
         },
 
         _tick: function () {

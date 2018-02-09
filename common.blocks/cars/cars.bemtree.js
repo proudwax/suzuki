@@ -19,25 +19,25 @@ block('cars').content()(function() {
 
     return [
         {
-            elem: 'filter'
-        },
-        {
             block: 'sticky', 
             content: [
                 {
                     block: this.block,
-                    elem: 'header',
-                    content: [
-                        {
-                            elem: 'sort'
-                        },
-                        {
-                            elem: 'limit'
-                        },
-                        {
-                            elem: 'view'
-                        }
-                    ]
+                    elem: 'filter'
+                }
+            ]
+        },
+        {
+            elem: 'header',
+            content: [
+                {
+                    elem: 'sort'
+                },
+                {
+                    elem: 'limit'
+                },
+                {
+                    elem: 'view'
                 }
             ]
         },

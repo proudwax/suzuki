@@ -6,17 +6,25 @@
     }
 
     &:elem(col) {
-        flex-grow: 0;
-        flex-shrink: 0;
-        width: calc(100% / 3 - 16px);
+        flex-grow: 1;
+        flex-shrink: 1;
         margin-right: 16px;
+        font-size: 0;
 
         &:mod(half) {
             width: calc(50% - 16px);
         }
 
+        &:mod(third) {
+            width: calc(100% / 3 - 16px);
+        }
+
         &:last-child {
             margin-right: 0;
+        }
+
+        &:mod(content width) {
+            flex-grow: 0;
         }
     }
 }
