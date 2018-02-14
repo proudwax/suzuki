@@ -6,7 +6,7 @@
         display: inline-block;
     }
 
-    .button_theme_islands.button_view_action {
+    .button_theme_suzuki.button_view_action {
         background: rgba(153, 122, 0, 0.5);
 
         &:before {
@@ -21,7 +21,7 @@
         }
     }
 
-    .button_theme_islands.button_view_action.button_hovered {
+    .button_theme_suzuki.button_view_action.button_hovered {
         background: rgba(129, 103, 0, 0.6);
     }
 

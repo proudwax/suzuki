@@ -5,6 +5,8 @@
     shouldDeps: [
         // 'content',
         'mq',
-        'cars'
+        'cars',
+        'car-page',
+        { block: 'tile', mods: { type: 'horizontal' } }
     ]
 })

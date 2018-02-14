@@ -3,7 +3,7 @@ block('cars').elem('view').content()(function() {
         {
             block: 'radio-group',
             mods: {
-                theme: 'islands',
+                theme: 'suzuki',
                 size: 'm',
                 type: 'button'
             },

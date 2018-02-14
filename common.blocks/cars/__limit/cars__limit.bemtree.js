@@ -4,7 +4,7 @@ block('cars').elem('limit').content()(function() {
         return {
             block: 'button',
             mods: {
-                theme: 'islands',
+                theme: 'suzuki',
                 size: 'm',
                 type: 'link',
                 view: item.active ? 'action' : null

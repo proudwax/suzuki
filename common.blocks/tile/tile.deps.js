@@ -2,6 +2,5 @@
     mustDeps: [
     ],
     shouldDeps: [
-        'image',
     ]
 })

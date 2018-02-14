@@ -1,7 +1,7 @@
 modules.define('sticky', ['i-bem-dom', 'functions__throttle'], function (provide, bemDom, throttle) {
 
     // https://medium.com/@vursen/state-machine-for-sticky-blocks-70ca0bf4ee97
-    function createFSM({ actions, transitions, initialState }) {
+    /* function createFSM({ actions, transitions, initialState }) {
         var currentState = initialState;
         
         findTransitionFor = function (dimensions) {
@@ -20,6 +20,51 @@ modules.define('sticky', ['i-bem-dom', 'functions__throttle'], function (provide
         }
 
         return { findTransitionFor, performTransition };
+    } */
+
+    // Полифилл Array.find -> https://developer.mozilla.org/ru/docs/Web/JavaScript/Reference/Global_Objects/Array/find
+    if (!Array.prototype.find) {
+        Array.prototype.find = function (predicate) {
+            if (this == null) {
+                throw new TypeError('Array.prototype.find called on null or undefined');
+            }
+            if (typeof predicate !== 'function') {
+                throw new TypeError('predicate must be a function');
+            }
+            var list = Object(this);
+            var length = list.length >>> 0;
+            var thisArg = arguments[1];
+            var value;
+
+            for (var i = 0; i < length; i++) {
+                value = list[i];
+                if (predicate.call(thisArg, value, i, list)) {
+                    return value;
+                }
+            }
+            return undefined;
+        };
+    }
+
+    function createFSM(d) {
+        var currentState = d.initialState;
+        
+        findTransitionFor = function (dimensions) {
+            return d.transitions[currentState].find(function (item) {
+                return item.when(dimensions).every(function (condition) { 
+                    return condition; 
+                });
+            });
+        };
+        
+        performTransition = function (t) {
+            return function (dimensions, panel) {
+                currentState = t.to;
+                return d.actions[t.to](dimensions, panel);
+            }
+        }
+
+        return { findTransitionFor: findTransitionFor, performTransition: performTransition };
     }
 
     provide(bemDom.declBlock(this.name, {

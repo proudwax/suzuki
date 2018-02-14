@@ -1,0 +1,11 @@
+:block(car-details):mod(type column) {
+    :block(car-details) {
+        &:elem(label) {
+            width: calc(50% - 16px);
+        }
+
+        &:elem(value) {
+            width: calc(50% - 16px);
+        }
+    }
+}

@@ -1,0 +1,65 @@
+:block(tile):mod(type horizontal) {
+    :block(tile) {
+        &:elem(list) {
+            overflow-x: auto;
+            overflow-y: hidden;
+    
+            flex-wrap: nowrap;
+            -webkit-overflow-scrolling: touch;
+            -ms-overflow-style: -ms-autohiding-scrollbar;
+
+            &::-webkit-scrollbar {
+                display: none;
+            }
+        }
+
+        &:elem(item) {
+            display: inline-block;
+            margin-right: 16px;
+
+            &:last-child {
+                margin-right: 0;
+            }
+        }
+
+        &:elem(arrow) {
+            position: absolute;
+            z-index: 100;
+            bottom: 50%;
+            transform: translateY(50%);
+
+            display: block;
+            width: 50px;
+            height: 50px;
+            border-radius: 50%;
+
+            font-size: 0;
+
+            background-color: #fff;
+            box-shadow: 0 0 0 1px rgba(0,0,0,.1), 0 3px 4px -3px rgba(0,0,0,.3);
+
+            &:mod(type prev) {
+                background-image: url("data:image/svg+xml,%3Csvg width%3D%2212%22 height%3D%2220%22 viewBox%3D%220 0 12 20%22 xmlns%3D%22http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%22%3E%3Cpath d%3D%22M12.038 18.394L3.381 10l8.657-8.394L10.701.308l-9.97 9.697 9.97 9.687z%22 fill%3D%22%23000%22 fill-rule%3D%22evenodd%22%2F%3E%3C%2Fsvg%3E");
+                background-repeat: no-repeat;
+                background-position: calc(50% - 3px) 50%;
+                left: 20px;
+            }
+            &:mod(type next) {
+                background-image: url("data:image/svg+xml,%3Csvg width%3D%2212%22 height%3D%2220%22 viewBox%3D%220 0 12 20%22 xmlns%3D%22http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%22%3E%3Cpath d%3D%22M-.038 18.394L8.619 10-.038 1.606 1.299.308l9.97 9.697-9.97 9.687z%22 fill%3D%22%23000%22 fill-rule%3D%22evenodd%22%2F%3E%3C%2Fsvg%3E");
+                background-repeat: no-repeat;
+                background-position: calc(50% + 3px) 50%;
+                right: 20px;
+            }
+        }
+    }
+}
+
+@media (--small-only) {
+    :block(tile):mod(type horizontal) {
+        :block(tile) {
+            &:elem(item) {
+                max-width: 67%;
+            }
+        }
+    }
+}

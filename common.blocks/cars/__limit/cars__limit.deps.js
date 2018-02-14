@@ -6,7 +6,7 @@
         {
             block: 'button',
             mods: {
-                theme: 'islands',
+                theme: 'suzuki',
                 size: 'm',
                 view: 'action',
                 type: 'link'

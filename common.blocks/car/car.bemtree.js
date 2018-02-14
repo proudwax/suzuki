@@ -34,7 +34,12 @@ content()(function() {
                 },
                 {
                     elem: 'description',
-                    data: data
+                    content: [
+                        {
+                            block: 'car-details',
+                            data: data
+                        }
+                    ]
                 }
             ]
         }
